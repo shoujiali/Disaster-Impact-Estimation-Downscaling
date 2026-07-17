@@ -143,26 +143,30 @@ A **U-Net** convolutional neural network is trained to learn the relationship be
 
 ### Input Features
 
-- Hurricane_Totals
-- Hurricane_Wind
-- Hurricane_TMax
-- Hurricane_TMin
-- Hurricane_Pre
-- Hurricane_CERA
-- Elevation
+The U-Net model uses six raster-based input channels:
 
-### Target
+1. **Coarse-resolution water depth** (`water_01`)  
+   Flood water depth aggregated at a spatial resolution of 0.1°.
 
-- waterDepth
+2. **Cumulative precipitation** (`precip`)  
+   Total storm precipitation derived from PRISM climate data.
 
-The notebook includes
+3. **Maximum wind speed** (`wind`)  
+   Maximum hurricane-related wind speed over the event duration.
 
-- model construction,
-- training,
-- validation,
-- optimization,
-- prediction,
-- visualization.
+4. **Elevation** (`DEM`)  
+   Bare-earth elevation derived from the USGS Digital Elevation Model.
+
+5. **Slope**  
+   Terrain slope calculated from the elevation raster.
+
+6. **Tweet density**  
+   A raster representation of geolocated tweet counts or density.
+
+### Target Variable
+
+The prediction target is the observed flood water depth raster at a spatial
+resolution of 0.025°.
 
 ---
 
