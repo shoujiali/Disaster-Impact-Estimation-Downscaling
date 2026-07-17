@@ -46,9 +46,7 @@ Observed flood water depth was obtained from the **OpenFEMA** Individual Assista
 - Description: Reported flood water depth associated with FEMA assistance records. Most observations are recorded in inches, while a small number were originally reported in feet and converted during preprocessing.
 - Geographic identifiers include ZIP Code, Census Tract, Census Block Group, and Census Block.
 
-Dataset DOI:
-
-https://doi.org/10.7266/n90stx2y
+Dataset DOI: https://doi.org/10.7266/n90stx2y
 
 ---
 
@@ -168,6 +166,8 @@ The U-Net model uses six raster-based input channels:
 The prediction target is the observed flood water depth raster at a spatial
 resolution of 0.025°.
 
+![1](https://github.com/shoujiali/Disaster-Impact-Estimation-Downscaling/blob/main/Unet/workflow.png)
+
 ---
 
 ## Prediction
@@ -190,10 +190,8 @@ The prediction workflow consists of
 The notebook produces
 
 - Predicted flood depth maps
-- Training loss curves
-- Model performance metrics
-- Spatial comparison between observed and predicted flood depth
-- Visualization figures for model evaluation
+
+![1](https://github.com/shoujiali/Disaster-Impact-Estimation-Downscaling/blob/main/Unet/Unet%20predicaition.png)
 
 ---
 
@@ -209,12 +207,3 @@ The notebook produces
 
 ---
 
-## Future Improvements
-
-Potential future extensions include
-
-- incorporating additional remote sensing variables,
-- evaluating alternative deep learning architectures,
-- testing spatial cross-validation strategies,
-- extending the framework to additional hurricane events,
-- improving model generalization across regions.
